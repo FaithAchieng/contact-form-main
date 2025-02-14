@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -15,34 +16,40 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="main-card">
 
-  Contact Us
+  <h1>Contact Us</h1>
+  <form action="">
+    <div>
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" required>
 
-  First Name
-  This field is required
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" required>
+    </div>
+      <label for="email">Email Address</label>
+      <input type="email" name="email" required>
+  
+<label for="query"> Query Type</label>
+    <div>
+  <input type="radio" name="general">General Enquiry
+  <input type="radio" name="support">Support Request
+    </div>
+  <!-- Please select a query type -->
+<label for="Message">Message</label>
+  <textarea name="Message" id="Message" required></textarea>
+  
+  <input type="radio">I consent to being contacted by the team
+  <!-- To submit this form, please consent to being contacted -->
 
-  Last Name
-  This field is required
+  <button>Submit</button>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  <!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+</form>
+  </div>
+</div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
