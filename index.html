@@ -21,27 +21,34 @@
 
   <h1>Contact Us</h1>
   <form action="">
-    <div>
+    <div class="component1">
     <label for="firstName">First Name</label>
     <input type="text" name="firstName" required>
-
     <label for="lastName">Last Name</label>
     <input type="text" name="lastName" required>
+    
     </div>
+    
+    <div class="mail">
       <label for="email">Email Address</label>
       <input type="email" name="email" required>
+    </div>
   
 <label for="query"> Query Type</label>
     <div>
-  <input type="radio" name="general">General Enquiry
-  <input type="radio" name="support">Support Request
+      
+  <input type="radio" name="general" class="general">General Enquiry
+  <input type="radio" name="support" class="support">Support Request
     </div>
   <!-- Please select a query type -->
-<label for="Message">Message</label>
+  <label for="Message">Message</label>
+  <div>
   <textarea name="Message" id="Message" required></textarea>
-  
+</div>
+  <div>
   <input type="radio">I consent to being contacted by the team
   <!-- To submit this form, please consent to being contacted -->
+</div>
 
   <button>Submit</button>
 
@@ -53,7 +60,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/FaithAchieng">Faith Achieng</a>.
   </div>
 </body>
 </html>

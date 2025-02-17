@@ -9,10 +9,11 @@ align-items: center;
 }
 .main-card{
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-    width: 50%;
+    width: 40%;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     padding: 20px;
+    
 }
 @font-face {
     font-family: "ItalicKarla";
@@ -21,4 +22,9 @@ align-items: center;
 @font-face {
     font-family: "karla";
     src: url("./assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+.mail{
+display: flex;
+flex-direction: column;
 }
