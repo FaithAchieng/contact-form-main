@@ -28,3 +28,25 @@ align-items: center;
 display: flex;
 flex-direction: column;
 }
+.names{
+    display: flex;
+    gap: 200px;
+}
+.name-inputs{
+    display: flex;
+    gap: 100px;
+}
+.query{
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+}
+.general{
+    border: solid 2px black;
+}
+.support{
+    border: solid 2px black;
+}
+button{
+    width: 100%;
+}
