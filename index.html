@@ -17,13 +17,15 @@
 </head>
 <body>
   <div class="container">
+    
     <div class="main-card">
 
-  <h1>Contact Us</h1>
+      
   <form action="">
+    <h1 class="title">Contact Us</h1>
     <div class="names">
-      <label for="firstName">First Name</label>
-      <label for="lastName">Last Name</label>
+      <label for="firstName" >First Name</label>
+      <label for="lastName" >Last Name</label>
     </div>
     <div class="name-inputs">
     <input type="text" name="firstName" required>
@@ -45,11 +47,13 @@
   <!-- Please select a query type -->
   <label for="Message">Message</label>
   <div>
-  <textarea name="Message" id="Message" required></textarea>
+  <textarea name="Message" id="Message" required cols="65" rows="7"></textarea>
 </div>
   <div>
-  <input type="radio">I consent to being contacted by the team
+    <label for="custom-radio" class="custom-radio">
+  <input type="radio"><span></span> I consent to being contacted by the team
   <!-- To submit this form, please consent to being contacted -->
+    </label>
 </div>
 
   <button>Submit</button>
@@ -58,6 +62,7 @@
   Thanks for completing the form. We'll be in touch soon! -->
 </form>
   </div>
+
 </div>
   
   <div class="attribution">

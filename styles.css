@@ -23,6 +23,46 @@ align-items: center;
     font-family: "karla";
     src: url("./assets/fonts/Karla-VariableFont_wght.ttf");
 }
+.custom-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+/* Hide the default radio button */
+.custom-radio input {
+    display: none;
+}
+
+/* Create a square */
+.custom-radio span {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 4px; /* Optional: Slight rounding */
+}
+
+/* When the radio is checked, change background to green */
+.custom-radio input:checked + span {
+    background-color: green;
+    border-color: green;
+}
+
+/* Add a white checkmark when selected */
+.custom-radio input:checked + span::after {
+    content: "✔";  /* Unicode checkmark */
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .mail{
 display: flex;
