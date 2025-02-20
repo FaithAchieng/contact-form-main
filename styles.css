@@ -50,3 +50,7 @@ flex-direction: column;
 button{
     width: 100%;
 }
+.firstName{
+    border-radius: 5px;
+    width: 50%;
+}
