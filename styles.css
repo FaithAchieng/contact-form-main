@@ -52,5 +52,11 @@ button{
 }
 .firstName{
     border-radius: 5px;
-    width: 50%;
+   
+}
+.lastName{
+    border-radius: 5px;
+}
+.email{
+    border-radius: 5px;
 }
