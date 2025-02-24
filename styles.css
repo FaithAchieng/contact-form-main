@@ -60,3 +60,10 @@ button{
 .email{
     border-radius: 5px;
 }
+button{
+    background-color: hsl(169, 82%, 27%);
+    border: solid 2px hsl(169, 82%, 27%);
+    height: 30px;
+    border-radius: 5px;
+    color:hsl(0, 0%, 100%);
+}
