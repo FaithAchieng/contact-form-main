@@ -27,13 +27,18 @@ body{
     grid-template-areas:
         "fname fname lname lname"
         "fname-input fname-input lname-input lname-input"
+        "fname-error fname-error lname-error lname-error"
         "email-label email-label email-label email-label"
         "email-input email-input email-input email-input"
+        "email-error email-error email-error email-error"
         "query-label query-label query-label query-label"
         "radio1 radio1 radio2 radio2"
+        "query-error query-error query-error query-error"
         "message-label message-label message-label message-label"
         "message-textarea message-textarea message-textarea message-textarea"
+        "message-error message-error message-error message-error"
         "checkbox checkbox checkbox checkbox"
+        "consent-error consent-error consent-error consent-error"
         "submit submit submit submit";
     gap: 10px;
 }
@@ -46,6 +51,18 @@ body{
 .lname {
     grid-area: lname;
 }
+.fname-error{
+    grid-area: fname-error;
+    display: none;
+    color: hsl(0, 66%, 54%);
+}
+.lname-error{
+    grid-area: lname-error;
+    display: none;
+    color: hsl(0, 66%, 54%);
+    margin-bottom: 20px;
+}
+
 
 .fname-input {
     grid-area: fname-input;
@@ -71,6 +88,12 @@ body{
     border-radius: 5px;
     border:1px solid hsl(186, 15%, 59%);
 }
+.email-error{
+    grid-area: email-error;
+    display: none;
+    color: hsl(0, 66%, 54%);
+    margin-bottom: 20px;
+}
 
 .query-label {
     grid-area: query-label;
@@ -93,6 +116,12 @@ body{
     border:1px solid hsl(186, 15%, 59%);
     padding:5px;
 }
+.query-error{
+    grid-area: query-error;
+    display: none;
+    color: hsl(0, 66%, 54%);
+    margin-bottom: 20px;
+}
 
 .message-label {
     grid-area: message-label;
@@ -104,9 +133,22 @@ body{
     border-radius: 5px;
     border:1px solid hsl(186, 15%, 59%);
 }
+.message-error{
+    grid-area:message-error;
+    display: none;
+    color: hsl(0, 66%, 54%);
+    margin-bottom: 20px;
+
+}
 
 .checkbox {
     grid-area: checkbox;
+}
+.consent-error{
+    grid-area: consent-error;
+    display: none;
+    color: hsl(0, 66%, 54%);
+    margin-bottom: 20px;
 }
 
 .submit {
