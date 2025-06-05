@@ -136,7 +136,7 @@ function ContactForm() {
           <a href="https://www.frontendmentor.io?ref=challenge">
             Frontend Mentor
           </a>
-          . Coded by <a href="#">Faith Achieng</a>.
+          . Coded by <a href="https://github.com/FaithAchieng">Faith Achieng</a>.
         </div>
       </div>
     </div>
