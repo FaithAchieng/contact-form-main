@@ -125,6 +125,7 @@ body{
     background-color: hsl(148, 38%, 91%);
 }
 
+
 .radio2 {
     grid-area: radio2;
     border: 2px solid black;
@@ -138,6 +139,7 @@ body{
     cursor:pointer;
     background-color: hsl(148, 38%, 91%);
 }
+
 input[type="checkbox"]:checked {
     accent-color: hsl(169, 82%, 27%);
     
@@ -188,6 +190,8 @@ input[type="radio"]:checked {
     background-color: hsl(169, 82%, 27%);
     border: none;
     color: hsl(0,0%,100%);
+}.submit:hover{
+    background-color: hsl(169, 84%, 19%);
 }
 @font-face{
     font-family:'karla' ;
@@ -196,4 +200,32 @@ input[type="radio"]:checked {
 .asterix{
     color:hsl(169, 82%, 27%);
     margin: 10px;
+}
+@media screen and (max-width:768px){
+    .container-2 {
+    display: grid;
+    grid-template-rows: repeat(19, auto);
+    grid-template-areas:
+        "fname"
+        "fname-input"
+        "lname"
+        "lname-input"
+        "fname-error" 
+        "lname-error"
+        "email-label"
+        "email-input"
+        "email-error"
+        "query-label"
+        "radio1"
+        "radio2"
+        "query-error"
+        "message-label"
+        "message-textarea"
+        "message-error"
+        "checkbox"
+        "consent-error"
+        "submit";
+    gap: 10px;
+    }
+
 }
