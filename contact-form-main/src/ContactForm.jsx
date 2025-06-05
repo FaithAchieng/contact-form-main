@@ -15,23 +15,34 @@ function ContactForm() {
     const messageError = document.querySelector(".message-error");
     const consent = document.getElementById("consent");
     const consentError = document.querySelector(".consent-error");
+    const fnameInput=document.querySelector(".fname-input");
+    const lnameInput=document.querySelector(".lname-input");
+    const emailInput=document.querySelector(".email-input");
+    const messageTextarea=document.querySelector(".message-textarea")
 
     if (firstname.value.trim() === "") {
       firstnameError.style.display = "block";
+      fnameInput.style.border="1px solid hsl(0, 66%, 54%)"
     } else {
       firstnameError.style.display = "none";
+       fnameInput.style.border="1px solid hsl(186, 15%, 59%)"
+      
     }
 
     if (lastname.value.trim() === "") {
       lastnameError.style.display = "block";
+      lnameInput.style.border="1px solid hsl(0, 66%, 54%)"
     } else {
       lastnameError.style.display = "none";
+      lnameInput.style.border="1px solid hsl(186, 15%, 59%)"
     }
 
     if (!email.checkValidity()) {
       emailError.style.display = "block";
+      emailInput.style.border="1px solid hsl(0, 66%, 54%)"
     } else {
       emailError.style.display = "none";
+      emailInput.style.border="1px solid hsl(186, 15%, 59%)"
     }
 
     if (!queryGeneral.checked && !querySupport.checked) {
@@ -42,8 +53,11 @@ function ContactForm() {
 
     if (message.value.trim() === "") {
       messageError.style.display = "block";
+      messageTextarea.style.border="1px solid hsl(0, 66%, 54%)"
+      
     } else {
       messageError.style.display = "none";
+      messageTextarea.style.border="1px solid hsl(186, 15%, 59%)"
     }
 
     if (!consent.checked) {
@@ -97,7 +111,7 @@ function ContactForm() {
             <label className="message-label">
               Message <span className="asterix">*</span>
             </label>
-            <input className="message-textarea" />
+            <textarea className="message-textarea" />
             <div className="message-error">This field is required</div>
 
             <div className="checkbox">

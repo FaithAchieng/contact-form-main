@@ -70,12 +70,20 @@ body{
     border-radius: 5px;
     border:1px solid hsl(186, 15%, 59%);
 }
+.fname-input:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+    cursor:pointer;
+}
 
 .lname-input {
     grid-area: lname-input;
     height: 2rem;
     border-radius: 5px;
     border:1px solid hsl(186, 15%, 59%);
+}
+.lname-input:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+    cursor:pointer;
 }
 
 .email-label {
@@ -87,6 +95,10 @@ body{
     height: 2rem;
     border-radius: 5px;
     border:1px solid hsl(186, 15%, 59%);
+}
+.email-input:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+    cursor:pointer;
 }
 .email-error{
     grid-area: email-error;
@@ -107,6 +119,11 @@ body{
     border:1px solid hsl(186, 15%, 59%);
     padding:5px;
 }
+.radio1:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+    cursor:pointer;
+    background-color: hsl(148, 38%, 91%);
+}
 
 .radio2 {
     grid-area: radio2;
@@ -115,6 +132,18 @@ body{
     border-radius: 5px;
     border:1px solid hsl(186, 15%, 59%);
     padding:5px;
+}
+.radio2:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+    cursor:pointer;
+    background-color: hsl(148, 38%, 91%);
+}
+input[type="checkbox"]:checked {
+    accent-color: hsl(169, 82%, 27%);
+    
+}
+input[type="radio"]:checked {
+    accent-color: hsl(169, 82%, 27%); 
 }
 .query-error{
     grid-area: query-error;
