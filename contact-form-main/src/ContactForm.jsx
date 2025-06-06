@@ -1,4 +1,14 @@
+import React, { useState, useEffect } from 'react';
+import Logo from './assets/images/icon-success-check.svg';
+
 function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    // Reset submission state on reload
+    setIsSubmitted(false);
+  }, []);
+
   function handleSubmission(event) {
     event.preventDefault();
 
@@ -15,60 +25,81 @@ function ContactForm() {
     const messageError = document.querySelector(".message-error");
     const consent = document.getElementById("consent");
     const consentError = document.querySelector(".consent-error");
-    const fnameInput=document.querySelector(".fname-input");
-    const lnameInput=document.querySelector(".lname-input");
-    const emailInput=document.querySelector(".email-input");
-    const messageTextarea=document.querySelector(".message-textarea")
+    const fnameInput = document.querySelector(".fname-input");
+    const lnameInput = document.querySelector(".lname-input");
+    const emailInput = document.querySelector(".email-input");
+    const messageTextarea = document.querySelector(".message-textarea");
+
+    let isValid = true;
 
     if (firstname.value.trim() === "") {
       firstnameError.style.display = "block";
-      fnameInput.style.border="1px solid hsl(0, 66%, 54%)"
+      fnameInput.style.border = "1px solid hsl(0, 66%, 54%)";
+      isValid = false;
     } else {
       firstnameError.style.display = "none";
-       fnameInput.style.border="1px solid hsl(186, 15%, 59%)"
-      
+      fnameInput.style.border = "1px solid hsl(186, 15%, 59%)";
     }
 
     if (lastname.value.trim() === "") {
       lastnameError.style.display = "block";
-      lnameInput.style.border="1px solid hsl(0, 66%, 54%)"
+      lnameInput.style.border = "1px solid hsl(0, 66%, 54%)";
+      isValid = false;
     } else {
       lastnameError.style.display = "none";
-      lnameInput.style.border="1px solid hsl(186, 15%, 59%)"
+      lnameInput.style.border = "1px solid hsl(186, 15%, 59%)";
     }
 
     if (!email.checkValidity()) {
       emailError.style.display = "block";
-      emailInput.style.border="1px solid hsl(0, 66%, 54%)"
+      emailInput.style.border = "1px solid hsl(0, 66%, 54%)";
+      isValid = false;
     } else {
       emailError.style.display = "none";
-      emailInput.style.border="1px solid hsl(186, 15%, 59%)"
+      emailInput.style.border = "1px solid hsl(186, 15%, 59%)";
     }
 
     if (!queryGeneral.checked && !querySupport.checked) {
       queryError.style.display = "block";
+      isValid = false;
     } else {
       queryError.style.display = "none";
     }
 
     if (message.value.trim() === "") {
       messageError.style.display = "block";
-      messageTextarea.style.border="1px solid hsl(0, 66%, 54%)"
-      
+      messageTextarea.style.border = "1px solid hsl(0, 66%, 54%)";
+      isValid = false;
     } else {
       messageError.style.display = "none";
-      messageTextarea.style.border="1px solid hsl(186, 15%, 59%)"
+      messageTextarea.style.border = "1px solid hsl(186, 15%, 59%)";
     }
 
     if (!consent.checked) {
       consentError.style.display = "block";
+      isValid = false;
     } else {
       consentError.style.display = "none";
+    }
+
+    if (isValid) {
+      setIsSubmitted(true);
     }
   }
 
   return (
     <div className="container">
+      {isSubmitted && (
+        <div className="success" style={{ marginBottom: '20px' }}>
+          <p style={{ color: 'hsl(0, 0%, 100%)' }}>
+            <img src={Logo} alt="Success Icon" /> Message sent!
+          </p>
+          <p style={{ color: 'hsl(186, 15%, 59%)' }}>
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
+      )}
+
       <div className="main-card">
         <h1>Contact Us</h1>
         <form onSubmit={handleSubmission}>
@@ -142,4 +173,5 @@ function ContactForm() {
     </div>
   );
 }
+
 export default ContactForm;
